@@ -29,6 +29,7 @@ class BlogsList extends Component {
       };
 
     render() {
+        console.log(this.state.data)
         if (this.state.data != 0) {
         const blogsData = this.state.data;
 
@@ -36,6 +37,7 @@ class BlogsList extends Component {
             <div>
                 <ul>
                     {blogsData.map(element => (
+                        console.log(element.id),
                         <div key={element.id}>{element.title} <br></br>
                         <Link to={`/posts/${element.id}`}>Read Post</Link>
                         </div>
