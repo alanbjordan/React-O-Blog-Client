@@ -1,0 +1,15 @@
+.blogText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogPost {
+
+    text-align: center;
+}
+
+.textWrapper {
+    margin: 0 auto;
+    width: 900px;
+}
