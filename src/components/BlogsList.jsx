@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     Link,
   } from 'react-router-dom';
+
 class BlogsList extends Component {
     constructor() {
         super();
@@ -9,7 +10,6 @@ class BlogsList extends Component {
             data: []
         };
     } 
-
 
     async componentDidMount() {
         const data = await this.generateBlogs();
@@ -31,18 +31,15 @@ class BlogsList extends Component {
     render() {
         if (this.state.data != 0) {
         const blogsData = this.state.data;
-        console.log("This is the blog data", blogsData)
+
         return (
             <div>
                 <ul>
                     {blogsData.map(element => (
-                        // console.log(element)
                         <div key={element.id}>{element.title} <br></br>
                         <Link to={`/posts/${element.id}`}>Read Post</Link>
                         </div>
                     ))}
-                    {/* BlogsList */}
-                    {/*  */}
                 </ul>
             </div>
         )

@@ -9,7 +9,6 @@ class BlogsList extends Component {
         };
     } 
 
-
     async componentDidMount() {
         const data = await this.generateBlogs();
         this.setState({
