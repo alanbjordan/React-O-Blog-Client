@@ -29,9 +29,7 @@ class BlogsComment extends Component {
 
     render() {      
         if (this.state.data != 0) {
-        const prop = this.props.match.params.user_post;
         const blogsData = this.state.data;
-        console.log("On the route blog data", blogsData[0].comment)
         return (
             <div className="blogPost">
                 <h1>Comments</h1>
