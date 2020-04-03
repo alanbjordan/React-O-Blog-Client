@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogsList from './components/BlogsList';
 import BlogPost from './components/BlogPost';
+import BlogsComment from './components/BlogComment';
 import {
   Route,
   BrowserRouter as Router
@@ -12,7 +13,8 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path='/' component={BlogsList} />
-        <Route path='/posts/:user_post?' component={BlogPost} />
+        <Route exact path='/posts/:user_post?' component={BlogPost} />
+        <Route path='/posts/comments/:user_comment?' component={BlogsComment}/>
       </Router>
     </div>
   );
